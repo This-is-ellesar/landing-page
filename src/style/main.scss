@@ -1,5 +1,17 @@
-@font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Regular.ttf');
-  src: local('Roboto');
+@import './_fonts.scss';
+@import './colors.scss';
+//components
+@import './components/header.scss';
+@import './components/main.scss';
+@import './components/about.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 77%;
+  margin: 0 auto;
 }

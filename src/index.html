@@ -4,10 +4,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Вот тут над лого и favicon надо думать -->
   <title>Document</title>
 </head>
 <body>
-    <h1>Пиздец</h1>
-    <p>Нашалзщалфщзвлзщфцэвлфщзцлвфцлвщфц</p>
+  <header class="header">
+    <div class="header__items">
+      <img class="header__items-logo" src="./assets/images/logo.svg" alt="Логотип">
+      <span>г. Кропоткин, ул. Красная 232</span>
+    </div>
+    <nav class="header__items">
+      <a href="#" class="header__items-links">Обо мне</a>
+      <a href="#" class="header__items-links">Поводы для обращения</a>
+      <a href="#" class="header__items-links">Услуги и цены</a>
+      <a href="#" class="header__items-links">Отзывы</a>
+      <a href="#" class="header__items-links">Контакты</a>
+    </nav>
+  </header>
+  <section class="main">
+    <div class="main__container">
+      <p class="main__container-paragraph">Врач терапевт-гастроэнтеролог</p>
+      <h1 class="main__container-headline">Хамидуллина Елена Геннадьевна</h1>
+      <p class="main__container-desc">Хамидуллина Е.Г. — ваш высококвалифицированный врач терапевт-
+        гастроэнтеролог, обладающий многолетним опытом работы в области гастроэнтерологии и готовый прийти на помощь вам и вашей семье в самых сложных ситуациях.</p>
+      <button class="main__container-button">Записаться на прием</button>
+    </div>
+    <div class="background__image">
+      <img class="background__image-item" src="./assets/images/doctor.svg" alt="Задний фон">
+    </div>
+  </section>
+  <section class="about">
+    <h2 class="about__headline">Обо мне</h2>
+    <div class="about__container">
+      <div class="about__container-age">
+        <p class="top-text">Более</p>
+        <p class="age-value"><number>30</number>лет</p>
+        <p class="desc">стажа работы по специальности</p>
+      </div>
+      <div class="about__container-cards">
+        <div class="cards__container-headline">
+          <h3 class="headline">Cпециализация:</h3>
+          <span class="cards__container-desc">Терапевт, гастроэнтеролог</span>
+        </div>
+        <div class="cards__container">
+          <div class="cards__container-item">
+            <div class="top-text">Квалификационная категория</div>
+            <div class="top-text">Высшая медицинская категория</div>
+          </div>
+          <div class="cards__container-item">
+            <div class="top-text">Образование</div>
+            <div class="top-text">Челябинский Государственный медицинский институт</div>
+          </div>
+          <div class="cards__container-item">
+            <div class="top-text">Личные качества</div>
+            <div class="top-text">Ответственность, сопереживание, азарт и энтузиазм в работе</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="history"></section>
 </body>
 </html>

@@ -1,0 +1,73 @@
+.about {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 100px 0;
+  height: 540px;
+  &__headline {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0 120px;
+    &-age {
+      .top-text {
+        font-size: 36px;
+        font-weight: 600;
+      }
+      .age-value {
+        font-size: 36px;
+        font-weight: 600;
+        number {
+          margin-right: 10px;
+          font-size: 130px;
+          font-weight: 900;
+          color: $primary;
+        }
+      }
+      .desc {
+        width: 250px;
+        font-size: 28px;
+        font-weight: 500;
+      }
+    }
+    &-cards {
+      display: grid;
+      grid-template-rows: max-content 1fr;
+      gap: 70px;
+      .cards__container-headline {
+        display: flex;
+        font-size: 34px;
+        .headline {
+          margin-right: 30px;
+          font-weight: 600;
+        }
+      }
+      .cards__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 50px;
+        &-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 35px 30px;
+          width: 338px;
+          height: 300px;
+          background-color: $primary;
+          box-shadow: 4px 4px 20px rgba(11, 13, 18, 0.3);
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 29px;
+          color: $white;
+          .top-text {
+            font-size: 25px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
