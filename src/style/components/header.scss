@@ -53,7 +53,8 @@
       &-links {
         max-height: 700px;
         margin: 12px 0 0 0;
-        font-size: 20px;
+        font-size: 14px;
+        font-weight: 400;
         color: $black;
         text-decoration: none;
         border-bottom: none;
@@ -79,7 +80,7 @@
       flex-direction: column;
       text-align: center;
       padding: 20px 0;
-      width: 90%;
+      width: 80%;
       max-height: 700px;
       border-top: 1px solid rgba(0, 0, 0, 0.09);
       border-bottom: 1px solid rgba(0, 0, 0, 0.09);

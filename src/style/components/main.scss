@@ -7,32 +7,66 @@
     height: 570px;
     padding: 50px 10px;
   }
+  @include media('<=500px') {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
   &__container {
-    width: 1000px;
     z-index: 1;
+
+    @include media('>phone', '<desktop') {
+      margin-left: 40px;
+    }
+    @include media('<=500px') {
+      margin: 0;
+      text-align: center;
+    }
+
     &-paragraph {
       margin-bottom: 25px;
       font-size: 36px;
       font-weight: 600;
-      @include media('>=tablet', '<desktop') {
+      @include media('>phone', '<desktop') {
         margin-bottom: 15px;
         font-size: 22px;
         font-weight: 500;
+      }
+      @include media('<=500px') {
+        font-size: 16px;
       }
     }
     &-headline {
       margin-bottom: 60px;
       padding-bottom: 35px;
       width: max-content;
-      border-bottom: 2px solid $black;
+      border-bottom: 1px solid $black;
       font-size: 52px;
       font-weight: 700;
-      @include media('>=tablet', '<desktop') {
+      @include media('>phone', '<desktop') {
+        width: 50%;
         margin-bottom: 25px;
         padding-bottom: 30px;
         font-weight: 500;
         font-size: 35px;
         line-height: 41px;
+      }
+      @include media('<=500px') {
+        margin-bottom: 0;
+        width: 100%;
+        border-bottom: none;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 29px;
+      }
+    }
+    &-image {
+      display: none;
+      @include media('<=500px') {
+        display: block;
+        margin: 0 auto 35px;
+        text-align: center;
       }
     }
     &-desc {
@@ -45,7 +79,11 @@
         margin-bottom: 35px;
         max-width: 400px;
         font-size: 18px;
-        line-height: 21px;
+      }
+      @include media('<=500px') {
+        margin-bottom: 35px;
+        font-size: 15px;
+        line-height: 18px;
       }
     }
 
@@ -62,6 +100,16 @@
       &:active {
         transition: 0.2s all;
         transform: scale(0.98);
+      }
+      @include media('>=tablet', '<desktop') {
+        padding: 12px 26px;
+        max-width: 500px;
+        font-size: 16px;
+      }
+      @include media('<=500px') {
+        padding: 12px 26px;
+        font-size: 16px;
+        font-weight: 500;
       }
     }
   }

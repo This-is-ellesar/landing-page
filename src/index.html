@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- Вот тут над лого и favicon надо думать -->
+    <!-- Вот тут над тайтлом и favicon надо думать -->
     <title>Document</title>
   </head>
   <body>
@@ -52,20 +52,21 @@
       <div class="main__container">
         <p class="main__container-paragraph">Врач терапевт-гастроэнтеролог</p>
         <h1 class="main__container-headline">Хамидуллина Елена Геннадьевна</h1>
+        <img class="main__container-image" src="./assets/images/doctor-mobile.svg" alt="Доктор">
         <p class="main__container-desc">
           Хамидуллина Е.Г. — ваш высококвалифицированный врач терапевт-
           гастроэнтеролог, обладающий многолетним опытом работы в области
           гастроэнтерологии и готовый прийти на помощь вам и вашей семье в самых
           сложных ситуациях.
         </p>
-        <button class="main__container-button">Записаться на прием</button>
+        <button id="appointment" class="main__container-button">Записаться на прием</button>
       </div>
       <div class="background__image">
-        <img
+        <!-- <img
           class="background__image-item"
           src="./assets/images/doctor.svg"
           alt="Задний фон"
-        />
+        /> -->
       </div>
     </section>
     <section id="about" class="about">
@@ -106,5 +107,15 @@
       </div>
     </section>
     <section class="history"></section>
+
+
+    <!-- <dialog id="orderDialog" class="dialog">
+      <div class="dialog--overlay"></div>
+        <img
+          class="background__image-item"
+          src="./assets/images/doctor.svg"
+          alt="Задний фон"
+        />
+    </dialog> -->
   </body>
 </html>
