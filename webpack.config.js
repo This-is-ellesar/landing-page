@@ -35,7 +35,7 @@ const optimization = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: './index.js',
+  entry: './index.ts',
   devtool: isProd ? false : 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -74,8 +74,16 @@ module.exports = {
       ],
     }),
   ],
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
   module: {
     rules: [
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.js$/i,
         exclude: /node_modules/,
