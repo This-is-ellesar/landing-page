@@ -1,7 +1,6 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
   padding: 30px 0;
   &__items {
     display: flex;
@@ -10,10 +9,12 @@
       width: 53px;
       height: 40px;
       margin-right: 30px;
+      @include media('<desktop') {
+        margin-right: 0px;
+      }
     }
     &-links {
       margin-left: 52px;
-      padding-bottom: 5px;
       font-size: 20px;
       color: $black;
       text-decoration: none;
@@ -21,6 +22,88 @@
       &:hover {
         border-bottom: 2px solid $black;
       }
+    }
+    &-burger {
+      display: none;
+      outline: none;
+      border: none;
+    }
+  }
+
+  @include media('>=phone', '<desktop') {
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: max-content max-content;
+    gap: 20px 0;
+    justify-items: center;
+    padding: 30px 0 0 0;
+    &__items {
+      &-logo {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      &-address {
+        display: block;
+        grid-area: 1 / 2 / 2 / 3;
+        color: $text-black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+      }
+      &-links {
+        max-height: 700px;
+        margin: 12px 0 0 0;
+        font-size: 20px;
+        color: $black;
+        text-decoration: none;
+        border-bottom: none;
+        overflow: hidden;
+        &:hover {
+          border-bottom: none;
+        }
+        &:first-child {
+          margin: 0;
+        }
+      }
+      &-burger {
+        grid-area: 1 / 3 / 2 / 4;
+        display: block;
+        outline: none;
+        border: none;
+      }
+    }
+
+    .nav {
+      display: none;
+      grid-area: 2 / 1 / 3 / 4;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+      width: 90%;
+      max-height: 700px;
+      border-top: 1px solid rgba(0, 0, 0, 0.09);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      z-index: 999;
+      overflow: hidden;
+    }
+
+    .nav-active {
+      display: flex;
+      animation: list-in 0.2s ease-in-out;
+    }
+  }
+  @keyframes list-in {
+    from {
+      -webkit-transition: max-height 0.5s, padding 0.5s;
+      transition: max-height 0.5s, padding 0.5s;
+      max-height: 0;
+      padding: 0;
+      opacity: 0;
+    }
+    to {
+      -webkit-transition: max-height 0.5s, padding 0.5s;
+      transition: max-height 0.5s, padding 0.5s;
+      max-height: 700px;
+      padding: 20px 0;
+      opacity: 1;
     }
   }
 }

@@ -1,7 +1,12 @@
 .main {
+  position: relative;
   display: grid;
   height: calc(100vh - 70px);
   padding-top: 90px;
+  @include media('>=tablet', '<desktop') {
+    height: 570px;
+    padding: 50px 10px;
+  }
   &__container {
     width: 1000px;
     z-index: 1;
@@ -9,6 +14,11 @@
       margin-bottom: 25px;
       font-size: 36px;
       font-weight: 600;
+      @include media('>=tablet', '<desktop') {
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: 500;
+      }
     }
     &-headline {
       margin-bottom: 60px;
@@ -17,6 +27,13 @@
       border-bottom: 2px solid $black;
       font-size: 52px;
       font-weight: 700;
+      @include media('>=tablet', '<desktop') {
+        margin-bottom: 25px;
+        padding-bottom: 30px;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 41px;
+      }
     }
     &-desc {
       margin-bottom: 70px;
@@ -24,6 +41,12 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 27px;
+      @include media('>=tablet', '<desktop') {
+        margin-bottom: 35px;
+        max-width: 400px;
+        font-size: 18px;
+        line-height: 21px;
+      }
     }
 
     &-button {
@@ -43,9 +66,14 @@
     }
   }
   .background__image {
+    height: auto;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 0;
+    @include media('>=tablet', '<desktop') {
+      width: 400px;
+      height: 500px;
+    }
   }
 }

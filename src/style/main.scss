@@ -1,5 +1,6 @@
 @import './_fonts.scss';
 @import './colors.scss';
+@import './mixins.scss';
 //components
 @import './components/header.scss';
 @import './components/main.scss';
@@ -9,9 +10,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Roboto;
 }
 
 body {
   width: 77%;
   margin: 0 auto;
+
+  @include media('>=phone', '<desktop') {
+    width: 94%;
+  }
 }
