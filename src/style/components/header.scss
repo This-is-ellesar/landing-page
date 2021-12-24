@@ -27,6 +27,8 @@
       display: none;
       outline: none;
       border: none;
+      cursor: pointer;
+      background-color: transparent;
     }
   }
 
@@ -90,20 +92,12 @@
       animation: list-in 0.2s ease-in-out;
     }
   }
-  @keyframes list-in {
-    from {
-      -webkit-transition: max-height 0.5s, padding 0.5s;
-      transition: max-height 0.5s, padding 0.5s;
-      max-height: 0;
-      padding: 0;
-      opacity: 0;
-    }
-    to {
-      -webkit-transition: max-height 0.5s, padding 0.5s;
-      transition: max-height 0.5s, padding 0.5s;
-      max-height: 700px;
-      padding: 20px 0;
-      opacity: 1;
+
+  @include media('>=phone', '<=tablet') {
+    &__items {
+      &-address {
+        font-size: 14px;
+      }
     }
   }
 }
