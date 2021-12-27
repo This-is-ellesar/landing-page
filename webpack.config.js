@@ -1,36 +1,36 @@
 // libs
-const path = require('path');
+const path = require('path')
 // plugins
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MinimizeCssAssetWebpackPlugin = require('css-minimizer-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const MinimizeCssAssetWebpackPlugin = require('css-minimizer-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 // loaders
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const isDev = process.env.NODE_ENV === 'development';
-const isProd = !isDev;
+const isDev = process.env.NODE_ENV === 'development'
+const isProd = !isDev
 
-const filename = ext =>
-  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+const filename = (ext) =>
+  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
 
 const optimization = () => {
   const configObj = {
     splitChunks: {
       chunks: 'all',
     },
-  };
+  }
 
   if (isProd) {
     configObj.minimizer = [
       new MinimizeCssAssetWebpackPlugin(),
       new TerserWebpackPlugin(),
-    ];
+    ]
   }
 
-  return configObj;
-};
+  return configObj
+}
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -110,7 +110,7 @@ module.exports = {
               publicPath: (resourcePath, context) => {
                 return (
                   path.relative(path.dirname(resourcePath), context) + '/style/'
-                );
+                )
               },
             },
           },
@@ -130,7 +130,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(?:|woff2)$/i,
+        test: /\.(?:|ttf)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -142,4 +142,4 @@ module.exports = {
       },
     ],
   },
-};
+}
