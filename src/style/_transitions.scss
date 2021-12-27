@@ -51,3 +51,17 @@
     opacity: 1;
   }
 }
+
+@keyframes dialog-show {
+  from {
+    -webkit-transition: max-height 0.5s, padding 0.5s;
+    transition: max-height 0.5s, padding 0.5s;
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    -webkit-transition: max-height 0.5s, padding 0.5s;
+    transition: max-height 0.5s, padding 0.5s;
+    transform: scale(1);
+  }
+}
