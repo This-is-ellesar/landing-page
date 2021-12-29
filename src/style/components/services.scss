@@ -1,0 +1,76 @@
+.services {
+  padding: 90px 0;
+  @include grid(1fr, max-content 1fr, 90px);
+  @include media('<=1300px') {
+    padding: 40px 0;
+    gap: 30px;
+  }
+  &__headline {
+    text-align: center;
+    @include font-style(42px, 700);
+    @include media('<=1300px') {
+      @include font-style(30px, 700);
+    }
+    @include media('<=tablet') {
+      @include font-style(23px, 700);
+    }
+  }
+  &__content {
+    align-items: center;
+    @include grid(1fr 1fr, 1fr 1fr, 40px 50px);
+    @include media('<=500px') {
+      flex-direction: column;
+      @include flex(flex-start, flex-start);
+    }
+    &-item {
+      max-width: 400px;
+      height: 80px;
+      padding-left: 30px;
+      border-left: 6px solid $primary;
+      @include flex(none, center);
+      @include font-style(22px);
+      @include media('<=500px') {
+        max-width: 350px;
+        height: 30px;
+        @include font-style(15px);
+      }
+    }
+  }
+
+  &__actions {
+    @include flex(center, center);
+    @include media('<=500px') {
+      flex-direction: column;
+      @include flex(center, center);
+    }
+    &-button {
+      margin-right: 40px;
+      padding: 25px 45px;
+      background-color: $primary !important;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      @include button-setup;
+      @include font-style(24px, 600, $white);
+      @include media('>=phone', '<desktop') {
+        padding: 15px 26px;
+        @include font-style(16px, 500, $white);
+      }
+      @include media('<=500px') {
+        margin-bottom: 15px;
+        margin-right: 0px;
+        flex-direction: column;
+        @include flex(center, center);
+      }
+    }
+
+    .price {
+      border: 3px solid $primary;
+      background-color: $white !important;
+      @include font-style(24px, 600, $primary);
+      @include media('>=phone', '<desktop') {
+        padding: 12px 26px;
+        @include font-style(16px, 500, $primary);
+      }
+    }
+  }
+}
