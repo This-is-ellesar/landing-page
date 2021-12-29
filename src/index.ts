@@ -1,6 +1,6 @@
 import './style/main.scss'
 // heplers
-import { disabledAllPanels } from './assets/helpers/func'
+import { disabledAllPanels } from './helpers/func'
 
 // variables
 const burgerMenu: HTMLButtonElement = document.querySelector('#burger')
