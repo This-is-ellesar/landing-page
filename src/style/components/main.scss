@@ -3,8 +3,8 @@
   display: grid;
   height: calc(100vh - 70px);
   padding-top: 90px;
-  @include media('>=tablet', '<desktop') {
-    height: 570px;
+  @include media('>=phone', '<desktop') {
+    height: 100%;
     padding: 50px 10px;
   }
   @include media('<=500px') {

@@ -12,6 +12,10 @@
       @include media('<desktop') {
         margin-right: 0px;
       }
+      @include media('>=phone', '<tablet') {
+        width: 35px;
+        height: 25px;
+      }
     }
     &-links {
       margin-left: 52px;
