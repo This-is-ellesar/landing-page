@@ -1,1 +1,25 @@
 @import '~include-media/dist/_include-media.scss';
+
+@mixin font-style($size, $weight: 400, $color: $text-black) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin wh($width, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid($col, $row, $gap: 0) {
+  display: grid;
+  grid-template-rows: $row;
+  grid-template-columns: $col;
+  gap: $gap;
+}

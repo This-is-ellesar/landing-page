@@ -8,10 +8,9 @@
     padding: 50px 10px;
   }
   @include media('<=500px') {
-    width: 90%;
-    height: auto;
     margin: 0 auto;
     padding-top: 30px;
+    @include wh(90%, auto);
   }
   &__container {
     z-index: 1;
@@ -26,15 +25,13 @@
 
     &-paragraph {
       margin-bottom: 25px;
-      font-size: 36px;
-      font-weight: 600;
+      @include font-style(36px, 600);
       @include media('>phone', '<desktop') {
         margin-bottom: 15px;
-        font-size: 22px;
-        font-weight: 500;
+        @include font-style(22px, 500);
       }
       @include media('<=500px') {
-        font-size: 16px;
+        @include font-style(16px);
       }
     }
     &-headline {
@@ -42,23 +39,20 @@
       padding-bottom: 35px;
       width: max-content;
       border-bottom: 1px solid $black;
-      font-size: 52px;
-      font-weight: 700;
+      @include font-style(52px, 700, $black);
       @include media('>phone', '<desktop') {
         width: 50%;
         margin-bottom: 25px;
         padding-bottom: 30px;
-        font-weight: 500;
-        font-size: 35px;
         line-height: 41px;
+        @include font-style(35px, 500, $black);
       }
       @include media('<=500px') {
         margin-bottom: 0;
         width: 100%;
         border-bottom: none;
-        font-size: 25px;
-        font-weight: 700;
         line-height: 29px;
+        @include font-style(25px, 700, $black);
       }
     }
     &-image {
@@ -72,18 +66,17 @@
     &-desc {
       margin-bottom: 70px;
       max-width: 800px;
-      font-size: 20px;
-      font-weight: 400;
       line-height: 27px;
+      @include font-style(20px, 400, $black);
       @include media('>=tablet', '<desktop') {
         margin-bottom: 35px;
         max-width: 400px;
-        font-size: 18px;
+        @include font-style(18px);
       }
       @include media('<=500px') {
         margin-bottom: 35px;
-        font-size: 15px;
         line-height: 18px;
+        @include font-style(15px);
       }
     }
 
@@ -93,23 +86,15 @@
       border: none;
       background-color: $primary;
       cursor: pointer;
-      color: $white;
-      font-size: 24px;
-      font-weight: 600;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      @include font-style(24px, 600, $white);
       &:active {
         transition: 0.2s all;
         transform: scale(0.98);
       }
-      @include media('>=tablet', '<desktop') {
+      @include media('>=phone', '<desktop') {
         padding: 12px 26px;
-        max-width: 500px;
-        font-size: 16px;
-      }
-      @include media('<=500px') {
-        padding: 12px 26px;
-        font-size: 16px;
-        font-weight: 500;
+        @include font-style(16px, 500, $white);
       }
     }
   }
