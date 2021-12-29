@@ -6,6 +6,7 @@
 @import './components/header.scss';
 @import './components/main.scss';
 @import './components/about.scss';
+@import './components/occasion.scss';
 @import './components/dialog.scss';
 
 * {
@@ -20,7 +21,11 @@ body {
   width: 77%;
   margin: 0 auto;
 
-  @include media('>=phone', '<desktop') {
+  @include media('>1300px', '<desktop') {
+    width: 83%;
+  }
+
+  @include media('>=phone', '<1300px') {
     width: 94%;
   }
 }

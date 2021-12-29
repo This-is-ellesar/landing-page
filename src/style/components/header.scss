@@ -9,25 +9,27 @@
       @include media('<desktop') {
         margin-right: 0px;
       }
-      @include media('>=phone', '<tablet') {
+      @include media('<=500px') {
         @include wh(35px, 25px);
       }
     }
     &-links {
       margin-left: 52px;
-      @include font-style(20px, 400, $black);
       text-decoration: none;
       border-bottom: 2px solid $white;
+      @include font-style(20px, 400, $black);
+      @include media('<1500px') {
+        @include font-style(16px, 400, $black);
+      }
       &:hover {
         border-bottom: 2px solid $black;
       }
     }
     &-burger {
       display: none;
-      outline: none;
-      border: none;
       cursor: pointer;
       background-color: transparent;
+      @include button-setup;
     }
   }
 
@@ -61,8 +63,7 @@
       &-burger {
         grid-area: 1 / 3 / 2 / 4;
         display: block;
-        outline: none;
-        border: none;
+        @include button-setup;
       }
     }
 

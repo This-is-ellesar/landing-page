@@ -3,7 +3,8 @@
   display: grid;
   height: calc(100vh - 70px);
   padding-top: 90px;
-  @include media('>=phone', '<desktop') {
+  // background-image: url('../../assets/images/doctor.svg');
+  @include media('>=phone', '<1600px') {
     height: 100%;
     padding: 50px 10px;
   }
@@ -14,7 +15,6 @@
   }
   &__container {
     z-index: 1;
-
     @include media('>phone', '<desktop') {
       margin-left: 40px;
     }
@@ -22,7 +22,6 @@
       margin: 0;
       text-align: center;
     }
-
     &-paragraph {
       margin-bottom: 25px;
       @include font-style(36px, 600);
@@ -82,11 +81,10 @@
 
     &-button {
       padding: 25px 45px;
-      outline: none;
-      border: none;
-      background-color: $primary;
+      background-color: $primary !important;
       cursor: pointer;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+      @include button-setup;
       @include font-style(24px, 600, $white);
       &:active {
         transition: 0.2s all;

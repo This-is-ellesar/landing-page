@@ -1,5 +1,4 @@
 .about {
-  height: 540px;
   @include grid(none, max-content 1fr, 100px 0);
   @include media('>=phone', '<tablet') {
     padding-top: 30px;
@@ -9,12 +8,18 @@
   &__headline {
     text-align: center;
     @include font-style(42px, 700);
+    @include media('<=1300px') {
+      @include font-style(30px, 700);
+    }
     @include media('<=tablet') {
       @include font-style(23px, 700);
     }
   }
   &__container {
     @include grid(max-content 1fr, none, 0 120px);
+    @include media('<1600px') {
+      display: none;
+    }
     &-age {
       .top-text {
         @include font-style(36px, 600);
@@ -42,7 +47,8 @@
         }
       }
       .cards__container {
-        @include grid(1fr 1fr 1fr, none, 0 50px);
+        width: 100%;
+        @include grid(max-content max-content max-content, none, 0 50px);
         &-item {
           flex-direction: column;
           padding: 35px 30px;
@@ -53,6 +59,9 @@
           @include flex(space-between, center);
           @include font-style(22px, 600, $white);
           @include wh(338px, 300px);
+          @include media('<=desktop') {
+            @include wh(200px, 220px);
+          }
           &:hover {
             background-color: $primary;
           }
@@ -73,7 +82,7 @@
   .mobile {
     display: block;
     gap: 15px;
-    @include media('>=tablet') {
+    @include media('>=1600px') {
       display: none;
     }
     .accordion {
@@ -106,6 +115,9 @@
       transition: max-height 0.2s cubic-bezier(0, 0.69, 0, 1);
       line-height: 18px;
       @include font-style(15px, 400, $text-black);
+      p {
+        margin: 15px 0;
+      }
     }
 
     &__experience {

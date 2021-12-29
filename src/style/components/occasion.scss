@@ -1,0 +1,62 @@
+.occasion {
+  padding-top: 90px;
+  @include grid(1fr, max-content 1fr, 90px);
+  @include media('<=1300px') {
+    padding-top: 40px;
+    gap: 30px;
+  }
+  &__headline {
+    text-align: center;
+    @include font-style(42px, 700);
+    @include media('<=1300px') {
+      @include font-style(30px, 700);
+    }
+    @include media('<=tablet') {
+      @include font-style(23px, 700);
+    }
+  }
+  &__content {
+    width: 100%;
+    @include grid(1fr 1fr, max-content 1fr, 60px);
+    @include media('<=1300px') {
+      flex-direction: column;
+      gap: 30px;
+      @include flex(center, center);
+    }
+    &-item {
+      width: 100%;
+      .occasion__warning {
+        margin-bottom: 80px;
+        padding-left: 40px;
+        border-left: 6px solid $primary;
+        @include font-style(24px);
+        @include media('<=1300px') {
+          margin-bottom: 30px;
+          @include font-style(20px);
+        }
+        @include media('<=tablet') {
+          @include font-style(16px);
+        }
+      }
+      .occasion__card {
+        background-color: $primary;
+        &-headline {
+          padding: 50px;
+          @include font-style(28px, 500, $white);
+        }
+        &-content {
+          padding: 0 50px 50px;
+          .occasion__item {
+            display: flex;
+            margin-bottom: 25px;
+            @include font-style(18px, 500, $white);
+            &-value {
+              margin-left: 10px;
+              line-height: 29px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -40,9 +40,7 @@
       }
       .dialog__close-button {
         cursor: pointer;
-        background: none;
-        outline: none;
-        border: none;
+        @include button-setup;
       }
     }
     &-body {

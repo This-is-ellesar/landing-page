@@ -1,0 +1,26 @@
+- const occasionsLeftContent = ['заболевания верхних дыхательных путей;','заболевания нижних дыхательных путей;', 'гипертоническая болезнь;', 'хроническая сердечная недостаточность различной природы;', 'болезни почек;', 'болезни суставов;', 'постковидный синдром.']
+- const occasionRightContent = ['жжение и налет на языке;','горечь или неприятный привкус во рту;', 'изжога, отрыжка;', 'вздутие живота и газы;', 'ком в горле;','появление боли в любом отделе живота;', 'нарушение опорожнения кишечника (запор, понос, неполное опорожнение);','изменение цвета мочи, кала, примесь крови/слизи в кале;', 'избыточный вес;', 'рецидивирующие кожные сыпи;', 'реабилитация после химио- и радиотерапии.']
+section#occasion.occasion
+    h3.occasion__headline Поводы для обращения
+    .occasion__content 
+        .occasion__content-item
+            .occasion__warning. 
+                Хамидуллина Е.Г. настоятельно рекомендует 
+                при появлении хотя бы одного из 
+                нижеперечисленных сиптомов обратиться к 
+                специалисту как можно скорее.
+            .occasion__card
+                .occasion__card-headline Причины обратиться к терапевту
+                .occasion__card-content 
+                    each occasion in occasionsLeftContent
+                        .occasion__item
+                            +img('occasion__item-img','occasion-arrow.svg', 'Повод для обращения' )
+                            .occasion__item-value= occasion
+        .occasion__content-item
+            .occasion__card
+                .occasion__card-headline Причины обратиться к гастроэнтерологу
+                .occasion__card-content 
+                    each occasion in occasionRightContent
+                        .occasion__item
+                            +img('occasion__item-img','occasion-arrow.svg', 'Повод для обращения' )
+                            .occasion__item-value= occasion
