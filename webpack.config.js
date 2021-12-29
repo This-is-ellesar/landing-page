@@ -55,7 +55,7 @@ module.exports = {
   optimization: optimization(),
   plugins: [
     new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
+      template: path.resolve(__dirname, 'src/index.pug'),
       filename: 'index.html',
       minify: {
         collapseWhitespace: isProd,
@@ -79,6 +79,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.ts?$/,
         use: 'ts-loader',
