@@ -1,4 +1,6 @@
 .about {
+  padding: 0 8%;
+  background-color: $aboutBackground;
   @include grid(none, max-content 1fr, 100px 0);
   @include media('>=phone', '<tablet') {
     padding-top: 30px;

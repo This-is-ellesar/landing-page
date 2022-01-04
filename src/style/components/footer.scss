@@ -1,0 +1,102 @@
+.footer {
+  @include grid(1fr, max-content 1fr, 80px);
+  @include media('<=tablet') {
+    padding: 40px 0 0;
+    @include grid(1fr, max-content 1fr, 20px);
+  }
+  &__headline {
+    text-align: center;
+    @include font-style(42px, 700);
+    @include media('<=1300px') {
+      @include font-style(30px, 700);
+    }
+    @include media('<=tablet') {
+      @include font-style(23px, 700);
+    }
+  }
+
+  &__content {
+    padding: 0 8%;
+    @include grid(1fr 1.4fr, none, 40px);
+    @include media('<=tablet') {
+      @include grid(1fr, 1fr 1fr, 40px);
+    }
+    &-info {
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      .info__item {
+        margin: 0 0 50px;
+        @include media('<=tablet') {
+          margin: 15px;
+        }
+        h4 {
+          margin-bottom: 10px;
+          @include font-style(30px, 500);
+          @include media('<=tablet') {
+            margin-bottom: 5px;
+            @include font-style(16px, 500)
+          }
+        }
+        p {
+          line-height: 35px;
+          @include font-style(25px, 400);
+          @include media('<=tablet') {
+            @include font-style(18px, 500)
+          }
+        }
+      }
+    }
+  }
+
+  &-info {
+    padding: 30px 8% 0;
+    background-color: $aboutBackground;
+    @include flex(space-between, center);
+    @include media('<=tablet') {
+      flex-direction: column;
+      @include flex(center, center);
+    }
+    .info__left {
+      @include media('<=tablet') {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      h4 {
+        margin-bottom: 10px;
+        @include font-style(26px, 500, $text-black);
+        @include media('<=tablet') {
+          @include font-style(16px, 500, $text-black);
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        @include font-style(22px, 400, $text-black);
+        @include media('<=tablet') {
+          @include font-style(14px, 500, $text-black);
+        }
+      }
+    }
+    .info__right {
+      text-align: right;
+      @include media('<=tablet') {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      &-links {
+        @include flex(none, center);
+        margin-bottom: 15px;
+        .footer__link {
+          margin-left: 15px;
+          cursor: pointer;
+        }
+      }
+      p {
+        margin-bottom: 10px;
+        @include font-style(22px, 400, $text-black);
+        @include media('<=tablet') {
+          @include font-style(14px, 500, $text-black);
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 .services {
-  padding: 90px 0;
+  padding: 90px 8%;
   @include grid(1fr, max-content 1fr, 90px);
   @include media('<=1300px') {
-    padding: 40px 0;
+    padding: 40px 8%;
     gap: 30px;
   }
   &__headline {

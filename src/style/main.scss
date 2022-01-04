@@ -10,6 +10,7 @@
 @import './components/services.scss';
 @import './components/review.scss';
 @import './components/dialog.scss';
+@import './components/footer.scss';
 
 * {
   margin: 0;
@@ -17,17 +18,4 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: Roboto;
-}
-
-body {
-  width: 77%;
-  margin: 0 auto;
-
-  @include media('>1300px', '<desktop') {
-    width: 83%;
-  }
-
-  @include media('>=phone', '<1300px') {
-    width: 94%;
-  }
 }

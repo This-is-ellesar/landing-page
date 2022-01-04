@@ -1,5 +1,5 @@
 .header {
-  padding: 30px 0;
+  padding: 30px 8%;
   @include grid(max-content 1fr max-content, none);
   &__items {
     @include flex(none, center);
@@ -36,7 +36,7 @@
   @include media('>=phone', '<desktop') {
     @include grid(max-content 1fr max-content, max-content max-content, 20px 0);
     justify-items: center;
-    padding: 30px 0 0 0;
+    padding: 30px 8% 0;
     &__items {
       &-logo {
         grid-area: 1 / 1 / 2 / 2;

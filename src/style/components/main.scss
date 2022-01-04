@@ -2,11 +2,10 @@
   position: relative;
   display: grid;
   height: calc(100vh - 70px);
-  padding-top: 90px;
-  // background-image: url('../../assets/images/doctor.svg');
-  @include media('>=phone', '<1600px') {
+  padding: 90px 8% 0;
+  @include media('>=phone', '<1300px') {
     height: 100%;
-    padding: 50px 10px;
+    padding: 50px 8%;
   }
   @include media('<=500px') {
     margin: 0 auto;
@@ -102,9 +101,14 @@
     bottom: 0;
     right: 0;
     z-index: 0;
-    @include media('>=tablet', '<desktop') {
-      width: 400px;
-      height: 500px;
+    img {
+      @include media('<1300px') {
+        width: 400px;
+        height: 500px;
+      }
+      @include media('<tablet') {
+       display: none;
+      }
     }
   }
 }
