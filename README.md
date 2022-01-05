@@ -1,8 +1,6 @@
 # Хамидулина Е.Г
 
-# Scripts
-
-## run: 
+## Scripts: 
   * `npm run dev` -  start dev mode 
   * `npm run build` - generate static files in dist derrectory 
 
