@@ -1,4 +1,3 @@
-@import './_fonts.scss';
 @import './colors.scss';
 @import './mixins.scss';
 @import './transitions';
@@ -9,8 +8,10 @@
 @import './components/occasion.scss';
 @import './components/services.scss';
 @import './components/review.scss';
-@import './components/dialog.scss';
 @import './components/footer.scss';
+// dialogs
+@import './components/dialog.scss';
+@import './components/price-dialog.scss';
 
 * {
   margin: 0;

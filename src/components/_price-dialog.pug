@@ -1,0 +1,94 @@
+#priceDialog.price-dialog
+  #overlayDialog.price-dialog__overlay
+  .price-dialog__container
+    .price-dialog__container-header
+      h3 Прайс лист
+      button#closePriceDialog.dialog__close-button
+        img.dialog--close(src='./assets/images/close.svg' alt='Закрыть диалоговое окно')
+    .price-dialog__content
+
+      .content__item
+        .content__item-head
+          h5 Первичный прием
+          div 800 руб.
+        .content__item-body
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text опрос c разбором жалоб, истории заболевания;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text осмотр, знакомство с медицинской документацией;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text рекомендации по питанию, обследованию и лечению.
+
+      .content__item
+        .content__item-head
+          h5 Повторный прием
+          div 700 руб.
+        .content__item-body
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text обсуждение результатов дообследования и проводимой терапии;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text физикальный осмотр в динамике;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text уточнение диагноза и длительности терапии.
+
+      .content__item
+        .content__item-head
+          h5 Профилактический прием
+          div 700 руб.
+        .content__item-body
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text онкологическая настороженность;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text планирование беременности;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text риск сердечно-сосудистых заболеваний;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text стеопороз.
+
+      .content__item
+        .content__item-head
+          h5 Обслуживание “Семейное”
+          div 10 000 руб в мес.
+        .content__item-body
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text осмотр в офисе в приоритетном порядке;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text составление индивидуальных программ питания, плана обследования и лечения при хронических заболеваниях;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text «второе мнение» при наличии рекомендаций от другого специалиста;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text сопровождение любой лекарственной терапи;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text контроль состояния в динамике.
+
+      .content__item
+        .content__item-head
+          h5 Онлайн-консультация в режиме собеседования
+          div 500 руб.
+        .content__item-body
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text оценка результатов обследования;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text оценка динамики состояния для составления рекомендаций по питанию, лечебным мероприятиям, дообследованию;
+          .body__item
+            +img('.body__item-img', 'review-arrow.svg', 'Стрелка')
+            .body__item-text возможность сопровождения в процессе лечения.
+    .price-dialog__button
+      button.services__actions-button.appointment-price Записаться на прием

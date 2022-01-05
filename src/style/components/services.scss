@@ -1,5 +1,6 @@
 .services {
   padding: 90px 8%;
+  background-color: $aboutBackground;
   @include grid(1fr, max-content 1fr, 90px);
   @include media('<=1300px') {
     padding: 40px 8%;

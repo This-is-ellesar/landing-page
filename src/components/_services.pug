@@ -1,10 +1,10 @@
 - const services = ['Медицинское обследование и консультация', 'Профилактический приём и составление рекомендаций', 'Составление индивидуального плана лечения','Проведение онлайн-консультаций в режиме видеособеседования']
 
-section#services.services 
+section#services.services
     h3.services__headline Услуги и цены
     .services__content
-        each service in services 
-            .services__content-item= service 
-    .services__actions 
-        button.services__actions-button Записаться на прием
+        each service in services
+            .services__content-item= service
+    .services__actions
+        button.services__actions-button.appointment Записаться на прием
         button.services__actions-button.price Открыть прайс-лист

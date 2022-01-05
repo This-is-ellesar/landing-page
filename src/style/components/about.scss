@@ -1,11 +1,13 @@
 .about {
-  padding: 0 8%;
+  padding: 30px 8% 0;
   background-color: $aboutBackground;
   @include grid(none, max-content 1fr, 100px 0);
   @include media('>=phone', '<tablet') {
-    padding-top: 30px;
     gap: 15px;
     background-color: $aboutBackground;
+  }
+  @include media('<tablet') {
+    @include grid(none, max-content 1fr, 40px 0);
   }
   &__headline {
     text-align: center;
@@ -96,8 +98,11 @@
       border-top-style: none;
       border-left-style: none;
       border-right-style: none;
-      background: #fff;
+      background: $aboutBackground;
       transition: 0.4s;
+      &:last-child {
+        border-bottom: none;
+      }
       @include flex(space-between, center);
       @include font-style(18px, 400);
       &__arrow {
@@ -111,7 +116,7 @@
 
     .panel {
       padding: 0 15px;
-      background-color: white;
+      background-color: $aboutBackground;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s cubic-bezier(0, 0.69, 0, 1);
